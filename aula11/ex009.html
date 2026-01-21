@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    De qual país você é: <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="resposta()">
+    <div id="res"></div>
+
+
+    <script>
+        function resposta() {
+            var seletor = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var txt = seletor.value
+            if (txt == 'Brasil') {
+                res.innerHTML = `Seu país nativo é <strong>${txt}</strong>. Parabéns! Você é Brasileiro!`
+            } else {
+                res.innerHTML += `Você é um Estrangeiro/a!`
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
